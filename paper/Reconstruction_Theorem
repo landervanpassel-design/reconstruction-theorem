@@ -1,13 +1,51 @@
-Reconstruction after Extreme DistortionThe Distortion Field as a Primitive, and Three Pillars of Driven Return: a Dynamical Engine, Optimal Sacrifice, and the Power HighwayWe take as primitive a Distortion Field: a smooth scalar functional Δ\Delta\Delta
- on the configuration space of a system, measuring incoherence, whose coherent states are its sublevel sets {Δ<δ}\{\Delta < \delta\}\{\Delta < \delta\}
-. A high-distortion system is one whose natural dynamics and structured noise can drive Δ\Delta\Delta
- arbitrarily large, so that coherence, once lost, is not restored automatically but must be driven back by a costly sacrifice control. This paper develops the dynamics of such driven return in three co-equal pillars, unified by a single large-deviation risk layer — the cost of staying distorted — which serves as the backbone of the work.Pillar I (the dynamical engine). For a controlled Itô system on Rn\mathbb{R}^n\mathbb{R}^n
- (and, with bounded geometry, on a Riemannian manifold), all probabilistic content of reconstruction is funnelled through one scalar Coherence Drift Inequality μt≤−θ<0\mu_t \le -\theta < 0\mu_t \le -\theta < 0
-. This yields a quantitative almost-sure return theorem: the coherent set is reached almost surely with E[τδ−T]≤(Δ(xT)−δ)/θ\mathbb{E}[\tau_\delta - T] \le (\Delta(x_T) - \delta)/\theta\mathbb{E}[\tau_\delta - T] \le (\Delta(x_T) - \delta)/\theta
-, together with a finite variance, a closed-form high-probability time, and an exponential tail. The return rate θ=c s∗−MΦ−Mσ\theta = c\, s_* - M_\Phi - M_\sigma\theta = c\, s_* - M_\Phi - M_\sigma
- is explicit, with a sharp threshold s∗crit=(MΦ+Mσ)/cs_*^{\mathrm{crit}} = (M_\Phi + M_\sigma)/cs_*^{\mathrm{crit}} = (M_\Phi + M_\sigma)/c
-. A directional Ornstein–Uhlenbeck field realises the structured-noise hypotheses with a non-asymptotic corrector lifting.Pillar II (optimal sacrifice). Sacrifice is costly, so we characterise the cheapest reconstructing schedule. The exit-cost problem yields an HJB equation on the distortion field; its scalar reduction is a Riccati ODE whose drift-dominated limit gives an exact constant optimal schedule and an affine value function. We show that the constant schedule is optimal independently of noise intensity in the homogeneous model, and that genuine front-/back-loading arises only as an inhomogeneity effect. A large-deviation principle for the reconstruction time supplies the risk layer, whose rate function admits a control-theoretic reading as the value of an anti-reconstruction problem in structural Hamilton–Jacobi parallel with optimal sacrifice.Pillar III (the Power Highway). We model attention-maximising platforms as environments that optimise distortion endogenously. Against such an environment the agent still controls only its sacrifice. We establish a rigorous robust-reconstruction theorem: if the agent’s sacrifice budget exceeds the platform’s maximal distortion pull, the engine applies uniformly over every admissible platform policy, yielding almost-sure return with all the Pillar-I bounds. We define the price of the Power Highway and verify the result numerically. A worst-case rate function makes this a large-deviation theorem: prolonged incoherence is exponentially rare precisely when the robust margin is positive.Across the three pillars, the large-deviation risk layer — the cost of staying distorted — functions as one structural object read from each pillar in turn and validated numerically on a scalar model. The paper also develops an $N$-agent and mean-field reconstruction theory, an operational layer for estimating sacrifice, a framework dictionary with interface lemmas, and an explicit mapping to the core commitments of the Protected Desire Equilibrium programme.All conclusions are conditional on the stated assumptions. No empirical, relational, or AI system is claimed to satisfy them. The platform model in Pillar III is a stylised worst-case device. The numerics verify only the abstract stochastic-analysis statements on toy SDEs; nothing here constitutes empirical validation of any broader framework or platform behaviour.Main ContributionsRelative to the adjacent literature, and stated factually and conditionally on the assumptions throughout, this work contributes three distinctive elements:A hard protected-desire floor, realised dynamically. The coherent target is reached almost surely from any level of distortion under sustained sacrifice — a floor the dynamics earn as an attractor, rather than impose as a barrier.
-An explicit three-face risk layer. A single large-deviation object — the cost of staying distorted — unifies the engine’s tail, the anti-reconstruction value dual to optimal sacrifice, and the robust rate into one quantity, validated numerically on a scalar toy SDE.
-Endogenous adversarial optimisation of distortion (the Power Highway). The environment itself optimises the distortion drift; the agent still reconstructs almost surely whenever its sacrifice out-budgets the maximal distortion pull, at a quantified price and large-deviation price measuring the resilience the optimised environment destroys.
+# Reconstruction after Extreme Distortion
+
+### The Distortion Field as a Primitive, and Three Pillars of Driven Return: a Dynamical Engine, Optimal Sacrifice, and the Power Highway
+
+We take as primitive a **Distortion Field**: a smooth scalar functional $\Delta$ on the configuration space of a system, measuring incoherence, whose coherent states are its sublevel sets $\{\Delta < \delta\}$. A *high-distortion system* is one whose natural dynamics and structured noise can drive $\Delta$ arbitrarily large, so that coherence, once lost, is not restored automatically but must be *driven* back by a costly **sacrifice** control. This paper develops the dynamics of such driven return in three co-equal pillars, unified by a single **large-deviation risk layer** — the cost of staying distorted — which serves as the backbone of the work.
+
+**Pillar I (the dynamical engine).** For a controlled Itô system on $\mathbb{R}^n$ (and, with bounded geometry, on a Riemannian manifold), all probabilistic content of reconstruction is funnelled through one scalar **Coherence Drift Inequality** $\mu_t \le -\theta < 0$. This yields a quantitative almost-sure return theorem: the coherent set is reached almost surely with $\mathbb{E}[\tau_\delta - T] \le (\Delta(x_T) - \delta)/\theta$, together with a finite variance, a closed-form high-probability time, and an exponential tail. The return rate $\theta = c\, s_* - M_\Phi - M_\sigma$ is explicit, with a sharp threshold $s_*^{\mathrm{crit}} = (M_\Phi + M_\sigma)/c$. A directional Ornstein–Uhlenbeck field realises the structured-noise hypotheses with a non-asymptotic corrector lifting.
+
+**Pillar II (optimal sacrifice).** Sacrifice is costly, so we characterise the *cheapest* reconstructing schedule. The exit-cost problem yields an HJB equation on the distortion field; its scalar reduction is a Riccati ODE whose drift-dominated limit gives an **exact constant optimal schedule** and an affine value function. We show that the constant schedule is optimal independently of noise intensity in the homogeneous model. A large-deviation principle for the reconstruction time supplies the risk layer, whose rate function admits a control-theoretic reading as the value of an *anti-reconstruction* problem in structural Hamilton–Jacobi parallel with optimal sacrifice.
+
+**Pillar III (the Power Highway).** We model attention-maximising platforms as environments that **optimise distortion endogenously**. Against such an environment the agent still controls only its sacrifice. We establish a **rigorous robust-reconstruction theorem**: if the agent’s sacrifice budget exceeds the platform’s *maximal* distortion pull, the engine applies uniformly over every admissible platform policy, yielding almost-sure return with all the Pillar-I bounds. We define the **price of the Power Highway** and verify the result numerically. A worst-case rate function makes this a large-deviation theorem.
+
+Across the three pillars, the large-deviation **risk layer** — the cost of staying distorted — functions as one structural object read from each pillar in turn and validated numerically on a scalar model. The paper also develops an $N$-agent and mean-field reconstruction theory, an operational layer for estimating sacrifice, and an explicit mapping to the core commitments of the Protected Desire Equilibrium programme.
+
+All conclusions are **conditional** on the stated assumptions. No empirical system is claimed to satisfy them. The platform model in Pillar III is a stylised worst-case device. The numerics verify only the abstract stochastic-analysis statements on toy SDEs.
+
+---
+
+## Main Contributions
+
+Relative to the adjacent literature, and stated factually and **conditionally** on the assumptions throughout, this work contributes three distinctive elements:
+
+- A **hard protected-desire floor, realised dynamically**. The coherent target is reached almost surely from any level of distortion under sustained sacrifice — a floor the dynamics *earn as an attractor*, rather than impose as a barrier.
+- An **explicit three-face risk layer**. A single large-deviation object — the cost of staying distorted — unifies the engine’s tail, the anti-reconstruction value dual to optimal sacrifice, and the robust rate into one quantity, validated numerically on a scalar toy SDE.
+- **Endogenous adversarial optimisation of distortion** (the Power Highway). The environment itself optimises the distortion drift; the agent still reconstructs almost surely whenever its sacrifice out-budgets the maximal distortion pull, at a quantified price and large-deviation price.
 
 These are conditional mathematical results about abstract controlled SDEs. Where they touch behaviour or AI systems, the statements are explicitly analogical.
+
+---
+
+## The Distortion Field as a Primitive
+
+This paper is organised around one object taken as primitive: the **Distortion Field**, whose large-deviation **risk layer** — the cost of staying distorted — runs through all three pillars.
+
+**Definition (informal).** A **Distortion Field** on a configuration space $M$ is a smooth scalar functional $\Delta: M \to [0,\infty)$ whose value measures *incoherence* — distance from a designated coherent regime. Its sublevel sets
+$$
+\mathcal{C}_\delta = \{ x : \Delta(x) < \delta \}
+$$
+are the **coherent states**.
+
+Three derived primitives organise the analysis:
+
+1. **Coherence** — A state is coherent when $\Delta < \delta$. Reconstruction is the event $\{\Delta < \delta\}$ and the time $\tau_\delta$ at which it first occurs.
+2. **Distortion dynamics** — The *natural-distortion flow* $\Phi$ is the uncontrolled drift. A **high-distortion system** is one in which $\Phi$ and noise can carry the state arbitrarily far up the field.
+3. **Reconstruction by sacrifice** — Coherence is recovered by a *sacrifice control* $S$ that is coherence-aligned: $\langle S, \nabla\Delta \rangle \le -c\, s$. Sacrifice is costly because it works against the natural flow.
+
+**The three pillars**
+
+- **Pillar I — the dynamical engine**: All probabilistic content of reconstruction is funnelled through a single scalar **Coherence Drift Inequality** $\mu_t \le -\theta < 0$, which drives the quantitative almost-sure return theorem.
+- **Pillar II — optimal sacrifice**: Given the engine, what is the cheapest schedule that produces the required drift? This is solved via stochastic control (HJB/Riccati).
+- **Pillar III — the Power Highway**: What if the environment itself optimises distortion? We give conditions under which reconstruction still occurs almost surely against any such environment.
