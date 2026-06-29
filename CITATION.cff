@@ -1,39 +1,41 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: >-
-  Reconstruction after Extreme Distortion: The Distortion Field as a Primitive,
+  Reconstruction after Extreme Distortion: The Distortion Field as a Primitive
   and Three Pillars of Driven Return
 authors:
   - family-names: "Van Passel"
     given-names: "Lander"
     orcid: "https://orcid.org/0009-0000-1331-3127"
 version: "4.9"
-date-released: "2026-06-28"
+date-released: "2026-06-29"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.21017251"
+url: "https://doi.org/10.5281/zenodo.21017251"
+repository-code: "https://github.com/landervanpassel-design/reconstruction-theorem"
 keywords:
   - stochastic control
   - large deviations
   - Freidlin-Wentzell theory
-  - hitting times
+  - first-passage and hitting times
   - Hamilton-Jacobi-Bellman
   - mean-field games
 abstract: >-
-  A self-contained mathematical paper on driven return in controlled stochastic
-  systems. A Distortion Field (a smooth scalar functional measuring incoherence)
-  is taken as primitive; coherence, once lost, must be driven back by a costly
-  sacrifice control. The theory is developed in three co-equal pillars - a
-  dynamical engine (an almost-sure return theorem with hitting-time moments and
-  an exponential tail), optimal sacrifice (an HJB/Riccati analysis with an exact
-  drift-dominated schedule), and the Power Highway (a stylised worst-case
-  environment that optimises distortion endogenously, with a rigorous robust
-  reconstruction theorem) - unified by a single large-deviation risk layer. All
-  conclusions are conditional on stated assumptions; the numerics verify the
-  abstract toy-SDE statements only and are not empirical validation of any
-  formula, platform, or behaviour. Preprint; not peer-reviewed.
+  A self-contained mathematical study of driven return in controlled stochastic
+  systems. A scalar Distortion Field is taken as primitive, and the dynamics of
+  costly, sacrifice-driven return to coherence are developed in three co-equal
+  pillars - a quantitative almost-sure return engine, a variational theory of
+  optimal sacrifice, and an adversarial environment model (the Power Highway) -
+  unified by a single large-deviation risk layer with three faces and validated
+  numerically on one scalar toy SDE. All conclusions are conditional on their
+  stated assumptions; the platform model is a stylised worst-case device; and the
+  numerics verify the abstract toy-SDE / Freidlin-Wentzell statements only and are
+  not empirical validation of any platform or of the Protected Desire Equilibrium
+  / "love" formula. Preprint; not peer-reviewed.
 preferred-citation:
   type: article
   title: >-
-    Reconstruction after Extreme Distortion: The Distortion Field as a Primitive,
+    Reconstruction after Extreme Distortion: The Distortion Field as a Primitive
     and Three Pillars of Driven Return
   authors:
     - family-names: "Van Passel"
@@ -41,7 +43,5 @@ preferred-citation:
       orcid: "https://orcid.org/0009-0000-1331-3127"
   year: 2026
   notes: "Zenodo preprint, version 4.9. Not peer-reviewed."
-  # After you mint the Zenodo DOI, uncomment the next two lines and insert it
-  # (leaving them commented avoids exposing a placeholder DOI in GitHub's citation UI):
-  # doi: "10.5281/zenodo.XXXXXXX"
-  # url: "https://doi.org/10.5281/zenodo.XXXXXXX"
+  doi: "10.5281/zenodo.21017251"
+  url: "https://doi.org/10.5281/zenodo.21017251"

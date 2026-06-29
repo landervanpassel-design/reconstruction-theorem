@@ -1,5 +1,39 @@
-// Three-face risk-layer duality: numerical validation on ONE scalar coherence SDE.
-// dV = (phi0 - c*s) dt + sigma0 dW, absorbed at delta. c=1.
+// =============================================================================
+//  duality_sim.mjs
+//  Reproducible numerical validation — Experiment E (§14.2)
+//
+//  Paper : Reconstruction after Extreme Distortion: The Distortion Field as a
+//          Primitive and Three Pillars of Driven Return  (preprint, v4.9)
+//  Author: Lander Van Passel  (ORCID 0009-0000-1331-3127)
+//  DOI   : https://doi.org/10.5281/zenodo.21017251
+//
+//  What it does
+//  ------------
+//  Validates the three-face large-deviation "risk-layer" duality of §14.2 on a
+//  single scalar coherence SDE
+//        dV = (phi0 - c*s) dt + sigma0 dW,   absorbed at delta   (c = 1),
+//  reading the one risk-layer object from each of the three pillars:
+//    Face 2a  (Pillar II)  optimality of the sacrifice schedule s*  (cost sweep)
+//    Face 1   (Pillar I)   engine Bernstein tail and resilience exponent
+//    Face 3   (Pillar III) robust resilience rate and large-deviation price
+//                          under a worst-case "platform" pull
+//  The simulated first-passage law is cross-checked against the exact
+//  inverse-Gaussian survival function.
+//
+//  Determinism
+//  -----------
+//    * Plain Node.js, no dependencies.    Run:  node experiments/duality_sim.mjs
+//    * Euler–Maruyama integration, step dt = 0.01.
+//    * Seeded RNG (mulberry32), fixed seed 0x9e3779b9 -> identical output every
+//      run; no free parameters and no post-hoc fitting.
+//    * Sample sizes: N = 40,000 per cost-sweep point; N = 500,000 per tail panel.
+//      Documented discrepancies (§14.2): Euler absorption overshoot ~ sqrt(dt);
+//      Monte-Carlo error ~ 1/sqrt(N).
+//
+//  Scope / honesty: this verifies the abstract toy-SDE / Freidlin–Wentzell
+//  statements ONLY. It is not empirical validation of any platform, behaviour,
+//  or the PDE / "love" formula. Preprint; not peer-reviewed.
+// =============================================================================
 
 // ---- seeded RNG: mulberry32 (exact 32-bit via Math.imul) ----
 let _a = 0x9e3779b9 >>> 0;
